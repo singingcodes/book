@@ -9,13 +9,17 @@ class LatestRelease extends Component {
         <h2 className="text-center">Latest Release</h2>
         <Row>
           {books.map((book) => (
-            <Col md={3} key={book.asin} className="mb-2">
+            <Col md={2} key={book.asin} className="mb-2">
               <Card>
                 <Card.Img
-                  variant="top"
+                  variant="top fluid"
                   className="d-block w-100"
+                  height="300px"
                   src={book.img}
                 />
+                <Card.Body>
+                  <Card.Text>Price: ${book.price}</Card.Text>
+                </Card.Body>
               </Card>
             </Col>
           ))}
